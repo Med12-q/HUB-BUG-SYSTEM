@@ -29,7 +29,7 @@ function Routes() {
 export default function App() {
   return (
     <AppProvider>
-      <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+      <WouterRouter>
         <Routes />
       </WouterRouter>
     </AppProvider>
