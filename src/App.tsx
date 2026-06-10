@@ -1,16 +1,14 @@
 import { Switch, Route, Router as WouterRouter } from "wouter";
 import { AppProvider, useApp } from "@/context/AppContext";
 import LanguageSelect from "@/pages/LanguageSelect";
-import Register from "@/pages/Register";
 import Landing from "@/pages/Landing";
 import System from "@/pages/System";
 import AIChat from "@/pages/AIChat";
 
 function Routes() {
-  const { lang, user } = useApp();
+  const { lang } = useApp();
 
   if (!lang) return <LanguageSelect />;
-  if (!user) return <Register />;
 
   return (
     <Switch>
